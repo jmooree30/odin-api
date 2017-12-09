@@ -1,0 +1,19 @@
+<div class='headert'>
+	Flickr API
+</div>
+
+<div class='text'>
+	This is a practice implementation of the Flickr API. Enter a <a href="www.flickr.com">Flickr</a> user name to view that users photos.
+	</div>
+
+<div class='header'>
+<%= form_tag('/search', method: :get) do %>
+  <%= label_tag :id, "User name:" %>
+  <%= text_field_tag :id %><br>
+<%= submit_tag "Submit" %>
+  <% end %>
+
+<% @pics.each do |photo| %>
+	<%= image_tag photo.url_s %>
+<% end %>
+</div>

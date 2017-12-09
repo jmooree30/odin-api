@@ -1,0 +1,22 @@
+body {
+   background: image-url("a.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header{
+	text-align:center;
+}
+
+.headert{
+    text-align:center;
+	font-size:30px;
+	font-weight:bold;
+}
+
+.text{
+    text-align:center;
+	font-size:20px;
+}

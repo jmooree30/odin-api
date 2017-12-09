@@ -1,6 +1,10 @@
 class PhotosController < ApplicationController
 require 'flickraw'
-before_action :set_flickr
+#I know I know...
+FlickRaw.api_key="74ba850eb195f38f125d2a6060b28887"
+FlickRaw.shared_secret="62984b32c0561a1e"
+flickr.access_token="72157688142437582-b70b2e640f61161a"
+flickr.access_secret="418f5a7eb6f4bac3"
 
 def index
 user = params[:id]
@@ -21,11 +25,6 @@ def destroy
 end
 
 private
-def set_flickr
-FlickRaw.api_key = ENV['API_KEY']
-FlickRaw.shared_secret = ENV['SHARED_SECRET']
-flickr.access_token = ENV['ACCESS_TOKEN']
-flickr.access_secret = ENV['ACCESS_SECRET']
-end
+
 
 end
